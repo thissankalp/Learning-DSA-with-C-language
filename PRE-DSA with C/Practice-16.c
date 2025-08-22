@@ -30,7 +30,6 @@
 //     return 0;
 // }
 
-
 #include<stdio.h>
 
 int main(){
@@ -47,5 +46,5 @@ int main(){
     }
 
     printf("Final Sum : %d\n", sum);
-    
+
 }
