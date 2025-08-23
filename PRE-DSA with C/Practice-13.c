@@ -7,7 +7,7 @@ int main(){
 
     //Euclid's algorithm to find GCD(Greatest Common Divisor)
     while(b!=0){
-        int r = a%b;
+        int r = a % b;
         a=b;
         b=r;
     }
