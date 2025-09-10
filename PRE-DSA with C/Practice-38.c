@@ -1,8 +1,12 @@
 #include<stdio.h>
 int main(){
-    int arr[5];
+    int n;
 
-    printf("Enter 5 elementys for an array : ");
+    printf("Enter size of the array : ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements for an array : \n", n);
     for(int i = 0; i<5; i++){
         scanf("%d", &arr[i]);
     }
