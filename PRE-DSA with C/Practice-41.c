@@ -3,6 +3,7 @@
 int main (){
 
     int arr[5];
+    printf("-----Welcome to linear search-----");
     printf("Enter 5 elements for your array :");
     for(int i = 0; i<5; i++){
         scanf("%d", &arr[i]);

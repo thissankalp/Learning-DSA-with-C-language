@@ -3,6 +3,7 @@
 int main(){
     int arr[5];
     int n = 5;
+    printf("-----Welcome to bubble sorting of array-----" );
     printf("Enter 5 elements for the array :" );
     for(int i = 0; i<n; i++){
         scanf("%d", &arr[i]);
