@@ -18,7 +18,7 @@ void insertionSort(int arr[], int n){
     }
 }
 
-void main(){
+int main(){
     int n;
     printf("Enter size of array : ");
     scanf("%d", &n);
@@ -29,5 +29,11 @@ void main(){
     }
 
     insertionSort(arr, n);
+
+    printf("Sorted array using Insertion Sort: ");
+    for(int i = 0; i < n; i++){
+        printf("%d ", arr[i]);
+    }
+
     return 0;
 }
