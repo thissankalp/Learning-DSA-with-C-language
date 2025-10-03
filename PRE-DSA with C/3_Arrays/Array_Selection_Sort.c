@@ -1,29 +1,51 @@
 #include<stdio.h>
 
+void selectionSort(int arr[], int n){
+    for(int i = 0; i<n-1; i++){
+        int smallestIndex = i;
+        for(int j = i+1; j<n; j++){
+            if(arr[j]< arr[smallestIndex]){
+                smallestIndex = j;
+            }
+        }
+        if(smallestIndex != i){
+            int temp = arr[i];
+            arr[i] = arr[smallestIndex];
+            arr[smallestIndex] = temp;
+        }
+    }
+}
+
 int main(){
-    int arr[5];
-    printf("Enter 5 elements for your array : ");
-    for(int i = 0; i<5; i++){
+    int n;
+    printf("Enter size of the array : ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements for your array : ", n);
+    for(int i = 0; i<n; i++){
         scanf("%d", &arr[i]);
     }
 
     //selection sort
     
-    for(int i = 0; i < 5-1; i++){
+    for(int i = 0; i < n-1; i++){
         int min_index = i;
-        for(int j = i + 1; j<5; j++){
+        for(int j = i + 1; j<n; j++){
             if(arr[j] <= arr[min_index]){
             min_index = j;
             }
         }
+        
         if(min_index != i){
                 int temp = arr[i];
                 arr[i] = arr[min_index];
                 arr[min_index] = temp;
             }
     }
-    printf("Elements sorted :");
-    for(int i = 0; i<5; i++){
+
+    printf("Elements sorted : ");
+    for(int i = 0; i<n; i++){
         printf("%d ", arr[i]);
     }
     printf("\n");
