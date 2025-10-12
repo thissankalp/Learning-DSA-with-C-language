@@ -37,3 +37,45 @@ int main(){
 
     return 0;
 }
+
+
+// Insertion Sort – How It Works (Step-by-Step)
+
+// Start from the second element.
+// Compare it with elements before it and insert it into the correct position.
+// Continue this for each element until the entire array is sorted.
+
+// Example with Array: [29, 10, 14, 37, 13]
+
+// Step 1:
+// Take the 2nd element → 10
+// Compare with 29 → 10 < 29 → insert before 29
+// Array: [10, 29, 14, 37, 13]
+
+// Step 2:
+// Take the 3rd element → 14
+// Compare with 29 → 14 < 29 → move 29 right
+// Compare with 10 → 14 > 10 → insert after 10
+// Array: [10, 14, 29, 37, 13]
+
+// Step 3:
+// Take the 4th element → 37
+// Compare with 29 → 37 > 29 → no movement needed
+// Array: [10, 14, 29, 37, 13]
+
+// Step 4:
+// Take the 5th element → 13
+
+// Compare with 37 → 13 < 37 → move 37 right
+// Array: [10, 14, 29, 37, 37]
+
+// Compare with 29 → 13 < 29 → move 29 right
+// Array: [10, 14, 29, 29, 37]
+
+// Compare with 14 → 13 < 14 → move 14 right
+// Array: [10, 14, 14, 29, 37]
+
+// Compare with 10 → 13 > 10 → insert after 10
+// Array: [10, 13, 14, 29, 37]
+
+// Sorted!

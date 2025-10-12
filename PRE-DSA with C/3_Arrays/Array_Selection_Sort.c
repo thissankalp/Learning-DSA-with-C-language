@@ -57,16 +57,7 @@ int main(){
 
 // Find the smallest (or largest) element in the unsorted part of the array.
 
-// Swap it with the first element of the unsorted part.
-
-// Move the boundary between sorted and unsorted by one position.
-
-// Repeat until the entire array is sorted.
-
-// Example with Array: [29, 10, 14, 37, 13]
-
-// Step 1:
-// Find the smallest element → 10
+// est element → 10
 // Swap it with 29 → [10, 29, 14, 37, 13]
 
 // Step 2:
@@ -84,4 +75,13 @@ int main(){
 // Find smallest → 29
 // Swap with 37 → [10, 13, 14, 29, 37]
 
-// Sorted!
+// Sorted!Swap it with the first element of the unsorted part.
+
+// Move the boundary between sorted and unsorted by one position.
+
+// Repeat until the entire array is sorted.
+
+// Example with Array: [29, 10, 14, 37, 13]
+
+// Step 1:
+// Find the small
