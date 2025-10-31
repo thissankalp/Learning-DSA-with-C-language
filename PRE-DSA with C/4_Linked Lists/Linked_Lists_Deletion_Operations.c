@@ -6,38 +6,77 @@ struct Node{
     struct Node *next;
 };
 
-void insertatEnd(struct Node **head, int value){
+struct Node * insertatEnd(struct Node *head, int value){
     struct Node * newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode -> data = value;
     newNode -> next = NULL;
 
-    if(*head == NULL){
-        *head = newNode;
-        return;
+    if(head == NULL){
+        return newNode;
     }
 
-    struct Node *temp = *head;
+    struct Node *temp = head;
     while(temp -> next != NULL){
         temp = temp ->next;
     }
-
     temp -> next = newNode;
+    return head;
 }
 
-void deleteatBeginning(struct Node **head){
-    if(*head == NULL){
+struct Node * deleteatBeginning(struct Node *head){
+    if(head == NULL){
         printf("Linked List is empty !!");
-        return;
+        return 0;
     }
 
-    struct Node *temp = *head;
-    *head = (*head) -> next;
+    struct Node *temp = head;
+    head = (head) -> next;
     printf("Deleted element : %d\n", temp->data);
     free(temp);
+    return head;
 }
 
-void printList(struct Node **head){
-    struct Node *temp = *head;
+struct Node * deleteatEnd(struct Node *head){
+    if(head == NULL){
+        printf("Linked List is empty !!");
+        return NULL;
+    }
+
+    if(head -> next == NULL){
+        printf("Deleted element : %d\n", head -> data);
+        free(head);
+        return 0;
+    }
+
+    struct Node *temp = head;
+    while(temp -> next -> next != NULL){
+        temp = temp -> next;
+    }
+    free(temp -> next);
+    temp -> next = NULL;
+    return head;
+}
+
+struct Node * deleteatPosition(struct Node * head, int target){
+    if(head == NULL){
+        printf("Linked List is empty !!");
+        return NULL;
+    }
+
+    struct Node * temp = head;
+    while(temp -> next != NULL){
+        temp = temp -> next;
+        if(temp -> data == target){
+            free(temp);
+            
+        }
+    }
+
+
+}
+
+void printList(struct Node *head){
+    struct Node *temp = head;
     printf("Linked Lists Elements : \n");
     while(temp != NULL){
         printf("%d -> ", temp -> data);
@@ -56,14 +95,20 @@ int main(){
     for(int i = 1; i<=n; i++){
         printf("Enter element %d : ", i);
         scanf("%d", &value);
-        insertatEnd(&head, value);
+        head = insertatEnd(head, value);
     }
     printf("Original List : \n");
-    printList(&head);
+    printList(head);
 
-    deleteatBeginning(&head);
+    // head = deleteatBeginning(head);
+    // printf("New List : \n");
+    // printList(head);
+
+    head = deleteatEnd(head); 
     printf("New List : \n");
-    printList(&head);
+    printList(head);
 
     return 0;
 }
+
+

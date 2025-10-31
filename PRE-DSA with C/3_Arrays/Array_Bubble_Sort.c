@@ -13,7 +13,7 @@ void bubbleSort(int arr[], int n){
 }
 
 int main(){
-    printf("-----Welcome to bubble sorting of array-----" );
+    printf("-----Welcome to bubble sorting of array-----");
     int n;
     printf("Enter size of an array : ");
     scanf("%d", &n);
