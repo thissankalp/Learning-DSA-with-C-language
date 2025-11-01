@@ -56,8 +56,10 @@ int main(){
 // Selection Sort – How It Works (Step-by-Step)
 
 // Find the smallest (or largest) element in the unsorted part of the array.
+// Example with Array: [29, 10, 14, 37, 13]
 
-// est element → 10
+// Step 1:
+// Find the smallest element → 10
 // Swap it with 29 → [10, 29, 14, 37, 13]
 
 // Step 2:
@@ -81,7 +83,3 @@ int main(){
 
 // Repeat until the entire array is sorted.
 
-// Example with Array: [29, 10, 14, 37, 13]
-
-// Step 1:
-// Find the small
