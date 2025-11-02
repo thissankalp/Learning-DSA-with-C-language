@@ -53,7 +53,7 @@ int rear = -1;   // Points to the last element
 // ==========================================================
 int enqueue(int value) {
     if (rear == MAX - 1) {
-        printf("⚠️ Queue Overflow! Cannot Enqueue.\n");
+        printf("Queue Overflow! Cannot Enqueue.\n");
         return 0;
     }
 
@@ -76,7 +76,7 @@ int enqueue(int value) {
 // ==========================================================
 int dequeue() {
     if (front == -1 || front > rear) {
-        printf("⚠️ Queue Underflow! Cannot Dequeue.\n");
+        printf("Queue Underflow! Cannot Dequeue.\n");
         return -1;
     }
 
@@ -101,7 +101,7 @@ int dequeue() {
 // ==========================================================
 int peek() {
     if (front == -1 || front > rear) {
-        printf("⚠️ Queue is empty!\n");
+        printf("Queue is empty!\n");
         return -1;
     }
     return queue[front];
@@ -131,11 +131,11 @@ int isFull() {
 // ==========================================================
 void display() {
     if (front == -1 || front > rear) {
-        printf("⚠️ Queue is empty!\n");
+        printf(" Queue is empty!\n");
         return;
     }
 
-    printf("\n🚗 Queue (Front → Rear): ");
+    printf("\n Queue (Front to Rear): ");
     for (int i = front; i <= rear; i++) {
         printf("%d ", queue[i]);
     }
@@ -167,9 +167,9 @@ int main() {
     display();
 
     if (isEmpty())
-        printf("✅ Queue is empty.\n");
+        printf(" Queue is empty.\n");
     else
-        printf("❌ Queue is not empty.\n");
+        printf(" Queue is not empty.\n");
 
     return 0;
 }
